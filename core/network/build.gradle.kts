@@ -4,11 +4,7 @@ plugins {
 
 android {
     namespace = "com.example.network"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
-    }
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 24
@@ -29,4 +25,12 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
+
+    // Retrofit (owns it here)
+    implementation(libs.bundles.retrofit)
+
+    // Koin for DI
+    implementation(libs.koin.core)
+
+    implementation(project(":core:common"))
 }

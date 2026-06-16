@@ -1,14 +1,11 @@
 plugins {
     alias(libs.plugins.android.library)
+    alias(libs.plugins.ksp)
 }
 
 android {
     namespace = "com.example.database"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
-    }
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 24
@@ -29,4 +26,13 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
+
+    // Room (owns it here)
+    implementation(libs.bundles.room)
+    ksp(libs.room.compiler)
+
+    // Koin for DI
+    implementation(libs.koin.core)
+
+    implementation(project(":core:common"))
 }

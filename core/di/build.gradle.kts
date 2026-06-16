@@ -4,11 +4,7 @@ plugins {
 
 android {
     namespace = "com.example.di"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
-    }
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 24
@@ -29,4 +25,18 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
+
+    // Full Koin (wires everything)
+    implementation(libs.bundles.koin)
+
+    // All core modules to create their modules
+    implementation(project(":core:network"))
+    implementation(project(":core:database"))
+    implementation(project(":core:datastore"))
+    implementation(project(":core:common"))
+
+    // All feature modules
+    implementation(project(":feature:home"))
+    implementation(project(":feature:detail"))
+    implementation(project(":feature:onboarding"))
 }

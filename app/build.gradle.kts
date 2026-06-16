@@ -5,11 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.newsapp"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
-    }
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.newsapp"
@@ -67,5 +63,11 @@ dependencies {
     implementation(project(":feature:detail"))
     implementation(project(":feature:home"))
     implementation(project(":feature:onboarding"))
+
+    // Navigation 3
+    implementation(libs.bundles.navigation3)
+
+    // Koin
+    implementation(libs.bundles.koin)
 
 }
