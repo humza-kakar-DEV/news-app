@@ -1,6 +1,7 @@
 package com.example.di
 
 import com.chuckerteam.chucker.api.ChuckerInterceptor
+import com.example.network.ApiKeyInterceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.ext.koin.androidContext
@@ -21,9 +22,14 @@ val networkModule = module {
     }
 
     single {
+        ApiKeyInterceptor(get())
+    }
+
+    single {
         OkHttpClient.Builder()
             .addInterceptor(get<HttpLoggingInterceptor>())
             .addInterceptor(get<ChuckerInterceptor>())
+            .addInterceptor(get<ApiKeyInterceptor>())
             .connectTimeout(30, TimeUnit.SECONDS)
             .readTimeout(30, TimeUnit.SECONDS)
             .build()

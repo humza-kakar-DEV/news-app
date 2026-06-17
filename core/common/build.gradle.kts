@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.library)
+    alias(libs.plugins.secrets)
 }
 
 android {
@@ -17,7 +18,15 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
 
+    buildFeatures {
+        buildConfig = true
+    }
 }
+
+secrets {
+    propertiesFileName = "secrets.properties"
+}
+
 
 dependencies {
     implementation(libs.androidx.appcompat)
