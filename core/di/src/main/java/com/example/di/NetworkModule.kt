@@ -1,7 +1,6 @@
 package com.example.di
 
 import com.chuckerteam.chucker.api.ChuckerInterceptor
-import com.example.network.NewsApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.ext.koin.androidContext
