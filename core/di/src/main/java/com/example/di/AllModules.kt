@@ -1,9 +1,10 @@
 package com.example.di
 
-val appModule = listOf(
+val allModules = listOf(
     networkModule,
     databaseModule,
     datastoreModule,
+    commonModule,
     detailModule,
     homeModule,
     onboardingModule
