@@ -1,6 +1,5 @@
 package com.example.di
 
-import com.example.network.NewsApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.dsl.module
@@ -25,13 +24,8 @@ val networkModule = module {
 
     single {
         Retrofit.Builder()
-            .baseUrl("https://newsapi.org/")
             .client(get())
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-    }
-
-    single {
-        get<Retrofit>().create(NewsApiService::class.java)
     }
 }
