@@ -29,6 +29,10 @@ dependencies {
     // Retrofit (owns it here)
     api(libs.bundles.retrofit)
 
+    // Chucker
+    debugApi(libs.chucker.library)
+    releaseApi(libs.chucker.library.no.op)
+
     // Koin for DI
     implementation(libs.koin.core)
 

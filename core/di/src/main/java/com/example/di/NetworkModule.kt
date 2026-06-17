@@ -1,7 +1,10 @@
 package com.example.di
 
+import com.chuckerteam.chucker.api.ChuckerInterceptor
+import com.example.network.NewsApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -15,8 +18,13 @@ val networkModule = module {
     }
 
     single {
+        ChuckerInterceptor.Builder(androidContext()).build()
+    }
+
+    single {
         OkHttpClient.Builder()
             .addInterceptor(get<HttpLoggingInterceptor>())
+            .addInterceptor(get<ChuckerInterceptor>())
             .connectTimeout(30, TimeUnit.SECONDS)
             .readTimeout(30, TimeUnit.SECONDS)
             .build()
