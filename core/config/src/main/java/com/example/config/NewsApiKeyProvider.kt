@@ -1,4 +1,4 @@
-package com.example.common.util
+package com.example.config
 
 class NewsApiKeyProvider (
     val newsApiKey: String

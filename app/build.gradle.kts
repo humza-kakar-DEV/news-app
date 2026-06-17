@@ -51,7 +51,7 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     debugImplementation(libs.androidx.compose.ui.tooling)
 
-//    feature modules
+//    core modules
     implementation(project(":core:common"))
     implementation(project(":core:database"))
     implementation(project(":core:datastore"))
@@ -59,8 +59,9 @@ dependencies {
     implementation(project(":core:di"))
     implementation(project(":core:navigation"))
     implementation(project(":core:network"))
+    implementation(project(":core:config"))
 
-//    core modules
+//    feature modules
     implementation(project(":feature:detail"))
     implementation(project(":feature:home"))
     implementation(project(":feature:onboarding"))

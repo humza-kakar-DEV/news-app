@@ -1,6 +1,7 @@
 package com.example.network
 
-import com.example.common.util.NewsApiKeyProvider
+import com.example.config.NewsApiKeyProvider
+
 
 class ApiKeyInterceptor(
     private val newsApiKeyProvider: NewsApiKeyProvider
