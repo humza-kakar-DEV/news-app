@@ -7,5 +7,6 @@ val allModules = listOf(
     commonModule,
     detailModule,
     homeModule,
-    onboardingModule
+    onboardingModule,
+    configModule
 )
