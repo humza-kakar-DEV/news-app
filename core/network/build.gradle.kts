@@ -27,7 +27,7 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
 
     // Retrofit (owns it here)
-    implementation(libs.bundles.retrofit)
+    api(libs.bundles.retrofit)
 
     // Koin for DI
     implementation(libs.koin.core)
