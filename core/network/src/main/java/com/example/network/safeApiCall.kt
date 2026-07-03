@@ -1,19 +1,18 @@
 package com.example.network
 
-suspend inline fun <T> safeApiCall(
-    crossinline apiCall: suspend () -> T
+suspend fun <T> safeApiCall(
+    apiCall: suspend () -> T
 ): NetworkResult<T> {
-
     return try {
-
-        NetworkResult.Success(
-            apiCall()
-        )
-
-    } catch (e: Exception) {
-
+        val response = apiCall()
+        NetworkResult.Success(response)
+    } catch (e: retrofit2.HttpException) {
         NetworkResult.Error(
-            e.message ?: "Unknown Error"
+            message = e.message ?: "HTTP Error"
         )
+    } catch (e: java.io.IOException) {
+        NetworkResult.Error("Network Error: Check Internet")
+    } catch (e: Exception) {
+        NetworkResult.Error("Unexpected Error: ${e.localizedMessage}")
     }
 }

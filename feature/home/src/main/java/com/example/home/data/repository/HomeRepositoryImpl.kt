@@ -1,5 +1,6 @@
 package com.example.home.data.repository
 
+import com.example.home.data.mapper.TopHeadlinesDtoToDomainBaseMapper
 import com.example.home.domain.datasource.HomeDataSource
 import com.example.home.domain.model.TopHeadlines
 import com.example.home.domain.repository.HomeRepository
@@ -9,22 +10,17 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
 class HomeRepositoryImpl(
-    private val homeDataSource: HomeDataSource
-): HomeRepository {
+    private val homeDataSource: HomeDataSource,
+    private val topHeadlinesDtoToDomainMapper: TopHeadlinesDtoToDomainBaseMapper
+) : HomeRepository {
 
     override suspend fun getTopHeadlines(): Flow<NetworkResult<TopHeadlines>> = flow {
-
-        emit(NetworkResult.Loading)
-
-        try {
-            emit(
-                NetworkResult.Success(
-                    safeApiCall { homeDataSource.getTopHeadlines() }
-                )
-            )
-        } catch (e: Exception) {
-            emit(NetworkResult.Error(e.message ?: "Unknown Error"))
-        }
+        emit(
+            safeApiCall {
+                topHeadlinesDtoToDomainMapper
+                    .map(homeDataSource.getTopHeadlines())
+            }
+        )
     }
 
 }
