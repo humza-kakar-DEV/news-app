@@ -7,9 +7,7 @@ import com.example.designsystem.theme.NewsAppTheme
 fun PreviewTheme(
     content: @Composable () -> Unit
 ) {
-    NewsAppTheme(
-        dynamicColor = false
-    ) {
+    NewsAppTheme {
         content()
     }
 }
