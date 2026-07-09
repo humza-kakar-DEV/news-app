@@ -22,11 +22,11 @@ fun CircularLoader(
     )
 }
 
-@Preview
+@AppPreview
 @Composable
 fun CircularLoaderPreview() {
-    CircularLoader(modifier = Modifier, size = 50.dp)
-//    PreviewTheme {
-//    }
+    PreviewTheme {
+        CircularLoader(modifier = Modifier, size = 50.dp)
+    }
 }
 
