@@ -2,7 +2,7 @@ package com.example.designsystem.color
 
 import androidx.compose.material3.lightColorScheme
 
-val LightColors = lightColorScheme(
+val LightColorScheme = lightColorScheme(
 
     background = White,
 
