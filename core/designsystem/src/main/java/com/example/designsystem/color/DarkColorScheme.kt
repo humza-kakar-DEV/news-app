@@ -4,17 +4,17 @@ import androidx.compose.material3.darkColorScheme
 
 val DarkColorScheme = darkColorScheme(
 
-    background = White,
+    background = Black,
 
-    onBackground = Black,
+    onBackground = White,
 
-    surface = Aria,
+    surface = Black,
 
-    onSurface = Black,
+    onSurface = Aria,
 
-    primary = FantasyConsoleSky,
+    primary = White,
 
-    onPrimary = White,
+    onPrimary = Black,
 
     error = RoyalMailRed,
 )
