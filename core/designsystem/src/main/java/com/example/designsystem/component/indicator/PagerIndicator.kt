@@ -14,10 +14,10 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.unit.dp
 import com.example.designsystem.animation.AnimationDuration
 import com.example.designsystem.preview.AppPreview
 import com.example.designsystem.preview.PreviewTheme
+import com.example.designsystem.token.SizeToken
 import com.example.designsystem.token.SpacingToken
 
 @Composable
@@ -43,7 +43,7 @@ fun PagerIndicator(
 
             Box(
                 modifier = Modifier
-                    .size(8.dp)
+                    .size(SizeToken.IndicatorSize)
                     .clip(CircleShape)
                     .background(color)
             )

@@ -28,12 +28,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.example.designsystem.component.image.CircularImage
 import com.example.designsystem.preview.AppPreview
 import com.example.designsystem.preview.PreviewTheme
+import com.example.designsystem.token.IconToken
 import com.example.designsystem.token.RadiusToken
+import com.example.designsystem.token.SizeToken
 import com.example.designsystem.token.SpacingToken
 
 @Composable
@@ -66,7 +67,7 @@ fun NewsCard(
                 model = imageUrl,
                 contentDescription = null,
                 modifier = Modifier
-                    .size(96.dp)
+                    .size(SizeToken.NewsImageSize)
                     .clip(RoundedCornerShape(RadiusToken.Medium))
                     .background(MaterialTheme.colorScheme.surfaceVariant),
                 contentScale = ContentScale.Crop
@@ -100,7 +101,7 @@ fun NewsCard(
                 ) {
                     CircularImage(
                         imageUrl = sourceIconUrl,
-                        size = 20.dp,
+                        size = SizeToken.SmallImageSize,
                         placeholderColor = MaterialTheme.colorScheme.primaryContainer
                     )
 
@@ -114,7 +115,7 @@ fun NewsCard(
                     Icon(
                         imageVector = Icons.Outlined.Schedule,
                         contentDescription = null,
-                        modifier = Modifier.size(12.dp),
+                        modifier = Modifier.size(IconToken.XSmall),
                         tint = MaterialTheme.colorScheme.outline
                     )
 
@@ -128,13 +129,13 @@ fun NewsCard(
 
                     IconButton(
                         onClick = onMoreClick,
-                        modifier = Modifier.size(24.dp)
+                        modifier = Modifier.size(IconToken.Medium)
                     ) {
                         Icon(
                             imageVector = Icons.Default.MoreHoriz,
                             contentDescription = null,
                             tint = MaterialTheme.colorScheme.outline,
-                            modifier = Modifier.size(16.dp)
+                            modifier = Modifier.size(IconToken.Small)
                         )
                     }
                 }

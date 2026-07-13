@@ -11,6 +11,8 @@ import androidx.compose.ui.res.stringResource
 import com.example.designsystem.R
 import com.example.designsystem.preview.AppPreview
 import com.example.designsystem.preview.PreviewTheme
+import com.example.designsystem.token.SizeToken
+import androidx.compose.foundation.layout.height
 
 @Composable
 fun PrimaryButton(
@@ -19,7 +21,7 @@ fun PrimaryButton(
     @StringRes textRes: Int,
 ) {
     Button(
-        modifier = modifier,
+        modifier = modifier.height(SizeToken.ButtonHeight),
         onClick = onClick,
     ) {
         Text(
