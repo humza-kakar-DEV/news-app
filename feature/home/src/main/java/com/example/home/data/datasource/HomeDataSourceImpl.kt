@@ -13,7 +13,6 @@ class HomeDataSourceImpl(
 ): HomeDataSource {
 
     override suspend fun getTopHeadlines(): TopHeadlinesDTO {
-        listOf<String>("slkjdflkjdsf", "lksjdflkdslkjflkdsf").asFlow().collect {  }
         return homeApi.getTopHeadlines()
     }
 

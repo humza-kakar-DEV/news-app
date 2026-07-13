@@ -3,7 +3,6 @@ package com.example.designsystem.component.chip
 import androidx.annotation.StringRes
 import com.example.designsystem.preview.AppPreview
 import com.example.designsystem.preview.PreviewTheme
-
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -16,6 +15,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.example.designsystem.R
+import com.example.designsystem.token.BorderToken
+import com.example.designsystem.token.RadiusToken
+import com.example.designsystem.token.SpacingToken
 
 @Composable
 fun ChoiceChip(
@@ -44,13 +46,13 @@ fun ChoiceChip(
         enabled = enabled,
         colors = colors,
         border = BorderStroke(
-            1.dp,
+            BorderToken.Thin,
             MaterialTheme.colorScheme.primary
         ),
-        shape = RoundedCornerShape(8.dp),
+        shape = RoundedCornerShape(RadiusToken.Medium),
         contentPadding = PaddingValues(
-            horizontal = 20.dp,
-            vertical = 10.dp
+            horizontal = SpacingToken.Large,
+            vertical = SpacingToken.XSmall
         )
     ) {
         Text(
