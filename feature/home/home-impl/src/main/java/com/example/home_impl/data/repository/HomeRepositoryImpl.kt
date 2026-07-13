@@ -1,9 +1,9 @@
 package com.example.home_impl.data.repository
 
 import com.example.home_impl.data.mapper.TopHeadlinesDtoToDomainBaseMapper
-import com.example.home.domain.datasource.HomeDataSource
-import com.example.home.domain.model.TopHeadlines
-import com.example.home.domain.repository.HomeRepository
+import com.example.home_impl.domain.datasource.HomeDataSource
+import com.example.home_impl.domain.model.TopHeadlines
+import com.example.home_impl.domain.repository.HomeRepository
 import com.example.network.NetworkResult
 import com.example.network.safeApiCall
 import kotlinx.coroutines.flow.Flow

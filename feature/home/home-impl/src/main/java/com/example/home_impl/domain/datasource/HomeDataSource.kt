@@ -1,6 +1,6 @@
 package com.example.home_impl.domain.datasource
 
-import com.example.home.data.remote.dto.TopHeadlinesDTO
+import com.example.home_impl.data.remote.dto.TopHeadlinesDTO
 
 interface HomeDataSource {
 

@@ -2,9 +2,9 @@ package com.example.home_impl.data.mapper
 
 import com.example.common.base.BaseMapper
 import com.example.home_impl.data.remote.dto.TopHeadlinesDTO
-import com.example.home.domain.model.Article
-import com.example.home.domain.model.Source
-import com.example.home.domain.model.TopHeadlines
+import com.example.home_impl.domain.model.Article
+import com.example.home_impl.domain.model.Source
+import com.example.home_impl.domain.model.TopHeadlines
 
 class TopHeadlinesDtoToDomainMapper : BaseMapper<TopHeadlinesDTO, TopHeadlines> {
     override fun map(input: TopHeadlinesDTO): TopHeadlines {
