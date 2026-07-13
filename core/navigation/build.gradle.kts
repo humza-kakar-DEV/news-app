@@ -32,7 +32,6 @@ dependencies {
     implementation(libs.bundles.compose)
     implementation(libs.bundles.navigation3)
 
-    implementation(project(":feature:home"))
     implementation(project(":feature:detail"))
     implementation(project(":feature:onboarding"))
 }

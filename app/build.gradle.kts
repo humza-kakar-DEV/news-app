@@ -55,7 +55,7 @@ dependencies {
     implementation(project(":core:common"))
     implementation(project(":core:database"))
     implementation(project(":core:datastore"))
-    implementation(project(":core:designsystem"))
+    implementation(project(":core:design-system"))
     implementation(project(":core:di"))
     implementation(project(":core:navigation"))
     implementation(project(":core:network"))
@@ -63,7 +63,6 @@ dependencies {
 
 //    feature modules
     implementation(project(":feature:detail"))
-    implementation(project(":feature:home"))
     implementation(project(":feature:onboarding"))
 
     // Navigation 3
