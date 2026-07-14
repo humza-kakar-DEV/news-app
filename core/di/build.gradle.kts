@@ -36,7 +36,8 @@ dependencies {
     implementation(project(":core:common"))
     implementation(project(":core:config"))
 
-    // All feature modules
-    implementation(project(":feature:detail"))
-    implementation(project(":feature:onboarding"))
+//    // All feature modules
+
+//    implementation(project(":feature:detail"))
+//    implementation(project(":feature:onboarding"))
 }

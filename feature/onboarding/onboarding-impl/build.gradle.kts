@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.home_api"
+    namespace = "com.example.onboarding_impl"
     compileSdk {
         version = release(36)
     }
@@ -28,5 +28,17 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
 
-    api(project(":core:navigation"))
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.bundles.compose)
+
+    // Koin ViewModel
+    implementation(libs.koin.compose)
+
+    // Lifecycle ViewModel
+    implementation(libs.androidx.lifecycle.runtime)
+
+    implementation(project(":core:common"))
+    implementation(project(":core:network"))
+    implementation(project(":core:database"))
+    implementation(project(":core:design-system"))
 }

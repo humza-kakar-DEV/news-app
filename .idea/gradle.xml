@@ -25,6 +25,8 @@
             <option value="$PROJECT_DIR$/feature/home/home-api" />
             <option value="$PROJECT_DIR$/feature/home/home-impl" />
             <option value="$PROJECT_DIR$/feature/onboarding" />
+            <option value="$PROJECT_DIR$/feature/onboarding/onboarding-api" />
+            <option value="$PROJECT_DIR$/feature/onboarding/onboarding-impl" />
           </set>
         </option>
       </GradleProjectSettings>

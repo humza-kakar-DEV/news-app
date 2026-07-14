@@ -62,8 +62,6 @@ dependencies {
     implementation(project(":core:config"))
 
 //    feature modules
-    implementation(project(":feature:detail"))
-    implementation(project(":feature:onboarding"))
     implementation(project(":feature:home:home-api"))
 
     // Koin

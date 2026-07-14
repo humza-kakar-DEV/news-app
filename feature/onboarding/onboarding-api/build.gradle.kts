@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.home_api"
+    namespace = "com.example.onboarding_api"
     compileSdk {
         version = release(36)
     }
@@ -27,6 +27,4 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
-
-    api(project(":core:navigation"))
 }
