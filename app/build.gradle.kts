@@ -56,17 +56,15 @@ dependencies {
     implementation(project(":core:database"))
     implementation(project(":core:datastore"))
     implementation(project(":core:design-system"))
-    implementation(project(":core:di"))
     implementation(project(":core:navigation"))
+    implementation(project(":core:di"))
     implementation(project(":core:network"))
     implementation(project(":core:config"))
 
 //    feature modules
     implementation(project(":feature:detail"))
     implementation(project(":feature:onboarding"))
-
-    // Navigation 3
-    implementation(libs.bundles.navigation3)
+    implementation(project(":feature:home:home-api"))
 
     // Koin
     implementation(libs.bundles.koin)

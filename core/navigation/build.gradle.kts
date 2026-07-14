@@ -27,11 +27,8 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
 
-    // Navigation 3 lives here
+    // Navigation 3
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.bundles.compose)
-    implementation(libs.bundles.navigation3)
-
-    implementation(project(":feature:detail"))
-    implementation(project(":feature:onboarding"))
+    api(libs.bundles.navigation3)
 }
