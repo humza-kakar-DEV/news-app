@@ -1,10 +1,8 @@
-package app.com.ubldigital.impl.login.presentation.navigation
+package com.example.home_impl.presentation.navigation
 
 import androidx.navigation3.runtime.EntryProviderScope
 import androidx.navigation3.runtime.NavKey
 import com.example.home_api.HomeFeatureApi
-import com.example.home_impl.presentation.navigation.HomeScreensRoute
-import com.example.home_impl.presentation.navigation.homeNavGraph
 import com.example.navigation.Navigator
 import com.example.navigation.Route
 
