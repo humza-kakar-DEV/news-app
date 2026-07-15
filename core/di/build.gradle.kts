@@ -26,18 +26,18 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
 
-    // Full Koin (wires everything)
+//  Full Koin
     implementation(libs.bundles.koin)
 
-    // All core modules to create their modules
+//  All core modules to create their modules
     implementation(project(":core:network"))
     implementation(project(":core:database"))
     implementation(project(":core:datastore"))
     implementation(project(":core:common"))
     implementation(project(":core:config"))
 
-//    // All feature modules
-
-//    implementation(project(":feature:detail"))
-//    implementation(project(":feature:onboarding"))
+//  All feature modules
+    implementation(project(":feature:home:home-impl"))
+//    implementation(project(":feature:detail:detail-impl"))
+//    implementation(project(":feature:onboarding:onboarding-impl"))
 }

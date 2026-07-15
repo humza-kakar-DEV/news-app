@@ -1,6 +1,6 @@
 package com.example.home_impl.data.repository
 
-import com.example.home_impl.data.mapper.TopHeadlinesDtoToDomainBaseMapper
+import com.example.home_impl.data.mapper.TopHeadlinesDtoToDomainMapper
 import com.example.home_impl.domain.datasource.HomeDataSource
 import com.example.home_impl.domain.model.TopHeadlines
 import com.example.home_impl.domain.repository.HomeRepository
@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.flow
 
 class HomeRepositoryImpl(
     private val homeDataSource: HomeDataSource,
-    private val topHeadlinesDtoToDomainMapper: TopHeadlinesDtoToDomainBaseMapper
+    private val topHeadlinesDtoToDomainMapper: TopHeadlinesDtoToDomainMapper
 ) : HomeRepository {
 
     override suspend fun getTopHeadlines(): Flow<NetworkResult<TopHeadlines>> = flow {

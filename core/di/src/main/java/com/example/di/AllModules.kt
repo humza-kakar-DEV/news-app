@@ -1,12 +1,14 @@
 package com.example.di
 
+import com.example.home_impl.data.di.homeModule
+
 val allModules = listOf(
     networkModule,
     databaseModule,
     datastoreModule,
     commonModule,
-    detailModule,
+//    detailModule,
     homeModule,
-    onboardingModule,
+//    onboardingModule,
     configModule
 )
