@@ -1,6 +1,7 @@
 package com.example.di
 
 import com.example.home_impl.data.di.homeModule
+import com.example.network.di.networkModule
 
 val allModules = listOf(
     networkModule,

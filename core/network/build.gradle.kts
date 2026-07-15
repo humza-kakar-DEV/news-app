@@ -35,6 +35,7 @@ dependencies {
 
     // Koin for DI
     implementation(libs.koin.core)
+    implementation(libs.koin.android)
 
     implementation(project(":core:common"))
     implementation(project(":core:config"))

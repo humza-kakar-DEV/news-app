@@ -1,4 +1,4 @@
-package com.example.di
+package com.example.network.di
 
 import com.chuckerteam.chucker.api.ChuckerInterceptor
 import com.example.network.ApiKeyInterceptor
