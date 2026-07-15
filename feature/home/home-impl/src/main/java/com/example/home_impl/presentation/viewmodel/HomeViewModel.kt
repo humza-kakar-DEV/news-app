@@ -4,20 +4,25 @@ import com.example.common.base.BaseEvent
 import com.example.common.base.BaseIntent
 import com.example.common.base.BaseState
 import com.example.common.base.BaseViewModel
+import com.example.home_impl.domain.usecase.GetTopHeadlinesUseCase
 
-class HomeViewModel: BaseViewModel<HomeState, HomeIntent, HomeEvent>(
+class HomeViewModel (
+    private val getTOpHeadlinesUseCase: GetTopHeadlinesUseCase
+): BaseViewModel<HomeState, HomeIntent, HomeEvent>(
     HomeState()
 ) {
+
+    init {
+        getTOpHeadlinesUseCase
+    }
 
     override suspend fun handleIntent(intent: HomeIntent) {
         when (intent) {
             HomeIntent.OnCategoryClick -> {
             }
             HomeIntent.OnNewsCardClick -> {
-
             }
             HomeIntent.OnSearchClick -> {
-
             }
         }
     }
