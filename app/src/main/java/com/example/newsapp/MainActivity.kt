@@ -21,9 +21,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             NewsAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    val systemPadding = innerPadding
                     Box(
-                        modifier = Modifier.fillMaxSize()
+                        modifier = Modifier.fillMaxSize().padding(innerPadding)
                     ) {
                         AppNavGraph()
                     }

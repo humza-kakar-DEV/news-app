@@ -2,6 +2,7 @@ package com.example.di
 
 import com.chuckerteam.chucker.api.ChuckerInterceptor
 import com.example.network.ApiKeyInterceptor
+import com.example.network.BASE_URL_LIVE
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.ext.koin.androidContext
@@ -35,8 +36,9 @@ val networkModule = module {
             .build()
     }
 
-    single {
+    single<Retrofit> {
         Retrofit.Builder()
+            .baseUrl(BASE_URL_LIVE)
             .client(get())
             .addConverterFactory(GsonConverterFactory.create())
             .build()
