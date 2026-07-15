@@ -8,4 +8,4 @@ const val EVERYTHING = BASE_URL_LIVE + "everything"
 
 const val TOP_HEADLINES = BASE_URL_LIVE + "top-headlines"
 
-const val SOURCES = BASE_URL_LIVE + "sources"
+const val SOURCES = "$TOP_HEADLINES/sources"
