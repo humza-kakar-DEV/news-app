@@ -15,4 +15,6 @@ object SizeToken {
     val NewsImageSize = 96.dp
 
     val SmallImageSize = 20.dp
+
+    val IconButtonSize = 44.dp
 }
