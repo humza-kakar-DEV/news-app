@@ -5,6 +5,7 @@ import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.Explore
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
@@ -17,6 +18,8 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
+import com.example.design_system.R
 import com.example.design_system.preview.AppPreview
 import com.example.design_system.preview.PreviewTheme
 
@@ -25,12 +28,12 @@ fun AppBottomBar(
     modifier: Modifier = Modifier,
 ) {
     var selectedItem by remember { mutableIntStateOf(0) }
-    val items = listOf("Home", "Explore", "Bookmark", "Profile")
+    val items = listOf(stringResource(R.string.home), stringResource(R.string.explore), stringResource(R.string.bookmark), stringResource(R.string.settings))
     val icons = listOf(
         Icons.Default.Home,
         Icons.Default.Explore,
         Icons.Default.Bookmark,
-        Icons.Default.Person
+        Icons.Default.Settings
     )
 
     NavigationBar(
