@@ -5,4 +5,6 @@ import com.example.navigation.Route
 
 interface HomeFeatureApi : FeatureApi {
     fun homeEntryPoint(): Route
+
+
 }

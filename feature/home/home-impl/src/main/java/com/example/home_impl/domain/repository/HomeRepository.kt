@@ -6,6 +6,9 @@ import kotlinx.coroutines.flow.Flow
 
 interface HomeRepository {
 
-    suspend fun getTopHeadlines(): Flow<NetworkResult<TopHeadlines>>
+    suspend fun getTopHeadlines(
+        country: String = "us",
+        category: String = "general"
+    ): Flow<NetworkResult<TopHeadlines>>
 
 }

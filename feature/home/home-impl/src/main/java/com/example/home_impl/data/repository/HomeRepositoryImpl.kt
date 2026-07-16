@@ -14,11 +14,19 @@ class HomeRepositoryImpl(
     private val topHeadlinesDtoToDomainMapper: TopHeadlinesDtoToDomainMapper
 ) : HomeRepository {
 
-    override suspend fun getTopHeadlines(): Flow<NetworkResult<TopHeadlines>> = flow {
+    override suspend fun getTopHeadlines(
+        country: String,
+        category: String
+    ): Flow<NetworkResult<TopHeadlines>> = flow {
         emit(
             safeApiCall {
                 topHeadlinesDtoToDomainMapper
-                    .map(homeDataSource.getTopHeadlines())
+                    .map(
+                        homeDataSource.getTopHeadlines(
+                            country = country,
+                            category = category
+                        )
+                    )
             }
         )
     }

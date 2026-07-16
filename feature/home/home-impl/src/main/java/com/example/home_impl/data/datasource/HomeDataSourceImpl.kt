@@ -8,8 +8,14 @@ class HomeDataSourceImpl(
     val homeApi: HomeApi
 ): HomeDataSource {
 
-    override suspend fun getTopHeadlines(): TopHeadlinesDTO {
-        return homeApi.getTopHeadlines()
+    override suspend fun getTopHeadlines(
+        country: String,
+        category: String
+    ): TopHeadlinesDTO {
+        return homeApi.getTopHeadlines(
+            country = country,
+            category = category
+        )
     }
 
 }

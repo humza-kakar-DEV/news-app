@@ -8,7 +8,13 @@ import kotlinx.coroutines.flow.Flow
 class GetTopHeadlinesUseCase(
     private val homeRepository: HomeRepository
 ) {
-    suspend operator fun invoke(): Flow<NetworkResult<TopHeadlines>> {
-        return homeRepository.getTopHeadlines()
+    suspend operator fun invoke(
+        country: String = "us",
+        category: String = "general"
+    ): Flow<NetworkResult<TopHeadlines>> {
+        return homeRepository.getTopHeadlines(
+            country = country,
+            category = category
+        )
     }
 }
