@@ -23,7 +23,7 @@ val networkModule = module {
     }
 
     single {
-        ApiKeyInterceptor(get())
+        ApiKeyInterceptor()
     }
 
     single {

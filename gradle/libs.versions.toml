@@ -28,7 +28,6 @@ datastore = "1.1.4"
 # Room
 room = "2.7.1"
 chucker = "4.3.1"
-secrets = "2.0.1"
 coil = "2.7.0"
 
 [libraries]
@@ -84,7 +83,6 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
-secrets = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version.ref = "secrets" }
 
 [bundles]
 koin = ["koin-android", "koin-compose", "koin-core"]

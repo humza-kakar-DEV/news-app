@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
@@ -59,7 +61,6 @@ dependencies {
     implementation(project(":core:navigation"))
     implementation(project(":core:di"))
     implementation(project(":core:network"))
-    implementation(project(":core:config"))
 
 //    feature modules
     implementation(project(":feature:home:home-api"))

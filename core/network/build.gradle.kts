@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.library)
 }
@@ -8,14 +10,23 @@ android {
 
     defaultConfig {
         minSdk = 24
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        val localProperties = Properties().apply {
+            load(rootProject.file("local.properties").inputStream())
+        }
+        val newsApiKey = localProperties.getProperty("NEWS_API_KEY")
+        buildConfigField("String", "NEWS_API_KEY", "\"$newsApiKey\"")
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
 
+    buildFeatures {
+        buildConfig = true
+    }
 }
 
 dependencies {
@@ -38,5 +49,4 @@ dependencies {
     implementation(libs.koin.android)
 
     implementation(project(":core:common"))
-    implementation(project(":core:config"))
 }

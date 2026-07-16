@@ -28,7 +28,9 @@ class HomeViewModel(
 
     fun loadTopHeadlines() = viewModelScope.launch {
         setState {
-            copy(isLoading = true)
+            copy(
+                isLoading = true
+            )
         }
         getTopHeadlinesUseCase().collect { result ->
             when (result) {

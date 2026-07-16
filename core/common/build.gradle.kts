@@ -1,6 +1,5 @@
 plugins {
     alias(libs.plugins.android.library)
-    alias(libs.plugins.secrets)
     alias(libs.plugins.kotlin.compose)
 }
 
@@ -23,10 +22,6 @@ android {
         buildConfig = true
         compose = true
     }
-}
-
-secrets {
-    propertiesFileName = "secrets.properties"
 }
 
 

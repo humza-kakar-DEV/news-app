@@ -34,7 +34,6 @@ dependencies {
     implementation(project(":core:database"))
     implementation(project(":core:datastore"))
     implementation(project(":core:common"))
-    implementation(project(":core:config"))
 
 //  All feature modules
     implementation(project(":feature:home:home-impl"))
